@@ -4,13 +4,17 @@ import Button from '@mui/material/Button';
 import Art from '../assets/art.jpg'
 import { useNavigate } from 'react-router-dom';
 
+
+
 export default function Login(){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-
+    
+   
     const handlesubmit = () =>{
         if(username === "cwaysi" && password === "admin"){
+           
             navigate("/")
         }
        
@@ -40,6 +44,7 @@ export default function Login(){
             />
            <Button type='submit' id="outlined-basic"  variant='contained' color='success'>Login</Button>
            <Button>I don't have an account, sign-up</Button>
+          
            </form>
         </div>
     )

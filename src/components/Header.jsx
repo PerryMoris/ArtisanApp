@@ -1,14 +1,16 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useNavigate } from 'react-router-dom';
 
@@ -39,11 +41,22 @@ export default function TemporaryDrawer() {
 
   return (
     <div className='header'>
-      <Button onClick={toggleDrawer(true)}><MenuIcon /></Button>
-      <h3>&#128508;DeArtisans</h3>
-      <Drawer open={open} onClose={toggleDrawer(false)}>
+      <Box className='headerr' sx={{ flexGrow: 1 }}>
+      <AppBar className='headerr' position="static">
+        <Toolbar className='headerr' variant="dense">
+          <IconButton onClick={toggleDrawer(true)} edge="start" color="primary" aria-label="menu" sx={{ mr: 2 }}>
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" color="black" component="div">
+          &#128508;DeArtisans
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </Box>
+    <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
     </div>
   );
 }
+

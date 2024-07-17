@@ -7,6 +7,9 @@
   gap: 10px;
   background-color: rgb(245, 250, 255);
 }
+.headerr {
+  background-color: rgb(245, 250, 255);
+}
 .logincontainer {
   margin: 100px auto;
   width: 400px;
