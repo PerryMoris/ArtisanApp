@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  height: 50px;
+  box-shadow: 0 0 6px gray;
+  margin-bottom: 12px;
+}
+.logincontainer {
+  margin: 100px auto;
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px gray;
+  background-color: rgba(241, 241, 241, 0.719);
+  padding: 15px;
+  gap: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.formcontainer{
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logoimage {
+  width: 100px;
+}
+
+#outlined-basic {
+  width: 300px;
+}
+#outlined-adornment-password{
+  width: 265px;
+}
