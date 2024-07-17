@@ -13,6 +13,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useNavigate } from 'react-router-dom';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import EditIcon from '@mui/icons-material/Edit';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import NavigationIcon from '@mui/icons-material/Navigation';
+
+
 
 export default function TemporaryDrawer() {
   const [open, setOpen] = useState(false);
@@ -56,6 +63,23 @@ export default function TemporaryDrawer() {
     <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
+
+
+      <Box sx={{ '& > :not(style)': { m: 1 } }}>
+      <Fab color="primary" aria-label="add">
+        <AddIcon />
+      </Fab>
+      <Fab color="secondary" aria-label="edit">
+        <EditIcon />
+      </Fab>
+      <Fab variant="extended">
+        <NavigationIcon sx={{ mr: 1 }} />
+        Navigate
+      </Fab>
+      <Fab disabled aria-label="like">
+        <FavoriteIcon />
+      </Fab>
+    </Box>
     </div>
   );
 }
