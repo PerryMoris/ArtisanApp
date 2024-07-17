@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   height: 50px;
-  box-shadow: 0 0 6px gray;
+  box-shadow: 0 0 9px gray;
   margin-bottom: 12px;
   gap: 10px;
+  background-color: rgb(245, 250, 255);
 }
 .logincontainer {
   margin: 100px auto;
@@ -37,4 +38,16 @@
 }
 #outlined-adornment-password{
   width: 265px;
+}
+
+.homecontainer {
+  margin: auto;
+  min-width: 300px;
+  max-width: 1200px;
+  /* border: 1px solid gray; */
+  padding: 10px;
+}
+
+hr {
+  border-bottom: 1px solid gray;
 }

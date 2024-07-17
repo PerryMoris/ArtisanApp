@@ -40,7 +40,7 @@ export default function TemporaryDrawer() {
   return (
     <div className='header'>
       <Button onClick={toggleDrawer(true)}><MenuIcon /></Button>
-      <h3>De&#128508;Artisans</h3>
+      <h3>&#128508;DeArtisans</h3>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
